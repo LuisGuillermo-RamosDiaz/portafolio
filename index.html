@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Guillermo Ramos</title>
+    <meta name="description" content="Portafolio de Luis Guillermo Ramos Díaz, desarrollador de software y estudiante de Ingeniería en Tecnologías de la Información. Explora mis proyectos, habilidades y certificaciones.">
+    <meta name="keywords" content="developer, desarrollador, software, full-stack, frontend, backend, portafolio, Luis Guillermo Ramos Díaz, Java, JavaScript, React, Node.js, HTML, CSS">
+    <link rel="icon" type="image/png" href="assets/favicon-portafolio-lgrd.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="relative">
+
+    <canvas id="fondo-animado"></canvas>
+
+    <header class="cabecera-principal transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="text-2xl font-bold transition-colors hover:text-white" data-lang-key="logo">
+                        Guillermo Ramos
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex md:items-center md:gap-2 lg:gap-4" id="navegacionPrincipal">
+                    <a href="#inicio" class="enlace-navegacion font-medium text-sm lg:text-base px-3 py-2 rounded-md"><span data-lang-key="nav-inicio">Inicio</span></a>
+                    <a href="#sobremi" class="enlace-navegacion font-medium text-sm lg:text-base px-3 py-2 rounded-md"><span data-lang-key="nav-sobremi">Sobre Mí</span></a>
+                    <a href="#habilidades" class="enlace-navegacion font-medium text-sm lg:text-base px-3 py-2 rounded-md"><span data-lang-key="nav-habilidades">Habilidades</span></a>
+                    <a href="#proyectos" class="enlace-navegacion font-medium text-sm lg:text-base px-3 py-2 rounded-md"><span data-lang-key="nav-proyectos">Proyectos</span></a>
+                    <a href="#certificaciones" class="enlace-navegacion font-medium text-sm lg:text-base px-3 py-2 rounded-md"><span data-lang-key="nav-certificaciones">Certificaciones</span></a>
+                    <a href="#contacto" class="enlace-navegacion font-medium text-sm lg:text-base px-3 py-2 rounded-md"><span data-lang-key="nav-contacto">Contacto</span></a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div id="grupoIdiomasDesktop" class="grupo-idiomas flex">
+                        <button class="boton-idioma" data-lang="es">ES</button>
+                        <button class="boton-idioma" data-lang="en">EN</button>
+                        <button class="boton-idioma" data-lang="fr">FR</button>
+                    </div>
+                    
+                    <div class="md:hidden">
+                        <button type="button" class="boton-menu-movil" aria-controls="menu-movil" aria-expanded="false">
+                            <span class="sr-only" data-lang-key="sr-abrir-menu">Abrir menú principal</span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="superposicion-menu"></div>
+
+    <nav class="menu-movil-contenedor" id="menu-movil">
+        <div class="w-full flex justify-end mb-4">
+            <button type="button" class="boton-cerrar-menu" aria-label="Cerrar menú">
+                <span class="cruz-1"></span>
+                <span class="cruz-2"></span>
+            </button>
+        </div>
+        <a href="#inicio" class="enlace-navegacion-movil"><span data-lang-key="nav-inicio">Inicio</span></a>
+        <a href="#sobremi" class="enlace-navegacion-movil"><span data-lang-key="nav-sobremi">Sobre Mí</span></a>
+        <a href="#habilidades" class="enlace-navegacion-movil"><span data-lang-key="nav-habilidades">Habilidades</span></a>
+        <a href="#proyectos" class="enlace-navegacion-movil"><span data-lang-key="nav-proyectos">Proyectos</span></a>
+        <a href="#certificaciones" class="enlace-navegacion-movil"><span data-lang-key="nav-certificaciones">Certificaciones</span></a>
+        <a href="#contacto" class="enlace-navegacion-movil"><span data-lang-key="nav-contacto">Contacto</span></a>
+    </nav>
+
+    <main class="relative z-10">
+
+        <section id="inicio" class="min-h-screen flex sm:items-start lg:items-center pt-20 lg:pt-0">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <figure class="w-full max-w-xs sm:max-w-sm lg:mx-0 lg:justify-self-end animar-entrada lg:order-last" style="transition-delay: 150ms;">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="assets/retrato-movil.png">
+                            <source media="(max-width: 1024px)" srcset="assets/retrato-tablet.png">
+                            <img id="imagen-perfil" src="assets/retrato-escritorio.png" alt="Retrato profesional de Luis Guillermo Ramos Díaz" class="rounded-lg shadow-2xl object-cover aspect-square">
+                        </picture>
+                    </figure>
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left animar-entrada">
+                        <h1 class="titulo-principal tracking-tighter" data-lang-key="titulo-principal">DEVELOPER</h1>
+                        <p class="mt-2 text-2xl md:text-3xl font-light text-gray-200" data-lang-key="subtitulo-principal">Luis Guillermo Ramos Díaz</p>
+                        <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-xl" data-lang-key="carrera">Ingeniería en Tecnologías de la Información e Innovación Digital</p>
+                        <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                            <a href="#proyectos" class="boton-principal" data-lang-key="cta-proyectos">Ver Proyectos</a>
+                            <a href="#contacto" class="boton-secundario" data-lang-key="cta-contacto">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobremi" class="py-24 sm:py-32 scroll-mt-20">
+            <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-8 text-center">
+                <div class="animar-entrada">
+                    <h2 class="titulo-seccion" data-lang-key="titulo-sobremi">Sobre Mí</h2>
+                    <p class="mt-8 text-lg text-gray-300 leading-relaxed text-left md:text-justify" data-lang-key="desc-sobremi-1">Soy Luis Guillermo, un apasionado desarrollador y estudiante de cuarto cuatrimestre de Ingeniería en Tecnologías de la Información e Innovación Digital en la Universidad Politécnica de Sinaloa. Mi enfoque es crear soluciones de software eficientes, escalables y visualmente atractivas, transformando ideas complejas en aplicaciones funcionales que resuelven problemas reales.</p>
+                    <p class="mt-6 text-lg text-gray-300 leading-relaxed text-left md:text-justify" data-lang-key="desc-sobremi-2">Con una base sólida en ciencias de la computación y experiencia en desarrollo full-stack, aprendo y me adapto constantemente a las nuevas tecnologías. Mi objetivo es colaborar en proyectos desafiantes y seguir creciendo profesionalmente en el dinámico mundo del software.</p>
+                    <div class="mt-10">
+                        <a href="assets/curriculum-vitae-luis-guillermo-ramos-diaz.pdf" download="curriculum-vitae-luis-guillermo-ramos-diaz.pdf" class="boton-principal" data-lang-key="cta-cv">Descargar CV (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-24 sm:py-32 bg-opacity-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center animar-entrada">
+                    <h2 class="titulo-seccion mx-auto" data-lang-key="titulo-habilidades">Habilidades Técnicas</h2>
+                    <p class="mt-6 text-lg text-gray-300" data-lang-key="desc-habilidades">Mi conjunto de herramientas para construir y desplegar aplicaciones. Organizado por categorías.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-3 sm:gap-4 mt-12 animar-entrada" id="contenedorCategorias">
+                    <button class="categoria-habilidad activo" data-target="panel-lenguajes" data-lang-key="tab-lenguajes">Lenguajes</button>
+                    <button class="categoria-habilidad" data-target="panel-frontend" data-lang-key="tab-frontend">Frontend</button>
+                    <button class="categoria-habilidad" data-target="panel-backend" data-lang-key="tab-backend">Backend</button>
+                    <button class="categoria-habilidad" data-target="panel-herramientas" data-lang-key="tab-herramientas">Herramientas</button>
+                </div>
+                <div class="mt-12 animar-entrada" id="contenedorPaneles">
+                    <ul id="panel-lenguajes" class="panel-habilidad activo">
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-java.svg" alt="Icono de Java" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Java</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-javascript.svg" alt="Icono de JavaScript" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">JavaScript</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-kotlin.svg" alt="Icono de Kotlin" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Kotlin</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-cpp.svg" alt="Icono de C++" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">C++</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-c.svg" alt="Icono de C" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">C</span></div></li>
+                    </ul>
+                    <ul id="panel-frontend" class="panel-habilidad">
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-html.svg" alt="Icono de HTML" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">HTML</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-css.svg" alt="Icono de CSS" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">CSS</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-react.svg" alt="Icono de React" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">React</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-tailwind.svg" alt="Icono de Tailwind CSS" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Tailwind CSS</span></div></li>
+                    </ul>
+                    <ul id="panel-backend" class="panel-habilidad">
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-node-js.svg" alt="Icono de Node.js" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Node.js</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-mysql.svg" alt="Icono de MySQL" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">MySQL</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-mongodb.svg" alt="Icono de MongoDB" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">MongoDB</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-sqlite.svg" alt="Icono de SQLite" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">SQLite</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-postman.svg" alt="Icono de Postman" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Postman</span></div></li>
+                    </ul>
+                    <ul id="panel-herramientas" class="panel-habilidad">
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-git.svg" alt="Icono de Git" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Git</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-npm.svg" alt="Icono de NPM" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">NPM</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-vite.svg" alt="Icono de Vite" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Vite</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-figma.svg" alt="Icono de Figma" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">Figma</span></div></li>
+                        <li><div class="tarjeta-habilidad"><img src="assets/logo-visual-studio-code.svg" alt="Icono de VS Code" class="h-12 w-12 object-contain"><span class="mt-4 font-semibold text-base">VS Code</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center animar-entrada">
+                    <h2 class="titulo-seccion mx-auto" data-lang-key="titulo-proyectos">Proyectos Principales</h2>
+                    <p class="mt-6 text-lg text-gray-300" data-lang-key="desc-proyectos">Una selección de proyectos académicos que demuestran mis habilidades en acción.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mt-16">
+                    <article class="tarjeta-proyecto flex flex-col animar-entrada">
+                        <figure class="aspect-video">
+                            <picture>
+                                <source media="(max-width: 640px)" srcset="assets/prototipo-grupo-frontera-movil.png">
+                                <source media="(max-width: 1024px)" srcset="assets/prototipo-grupo-frontera-tablet.png">
+                                <img src="assets/prototipo-grupo-frontera-escritorio.png" alt="Vista previa del proyecto Grupo Frontera" class="w-full h-full object-cover">
+                            </picture>
+                        </figure>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold text-white" data-lang-key="p1-titulo">Sitio Web: Grupo Frontera</h3>
+                            <div class="mt-3">
+                                <span class="etiqueta-rol" data-lang-key="p1-rol">Proyecto Personal</span>
+                            </div>
+                            <p class="mt-3 text-gray-400 flex-1 text-left md:text-justify" data-lang-key="p1-desc">Una página web estática y visualmente atractiva dedicada al grupo musical "Grupo Frontera". El sitio presenta información completa sobre la banda, incluyendo su historia, una sección de discografía detallada y un apartado interactivo de integrantes. Se utilizó JavaScript puro para implementar ventanas modales dinámicas que muestran la biografía de cada miembro, todo dentro de un diseño moderno y cohesivo.</p>
+                            <div class="mt-4 flex flex-wrap gap-2"><span class="etiqueta-tecnologia">HTML</span><span class="etiqueta-tecnologia">CSS</span><span class="etiqueta-tecnologia">JavaScript</span></div>
+                            <div class="mt-6 flex gap-6">
+                                <a href="https://grupo-frontera.netlify.app/" class="enlace-proyecto" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/icono-internet.svg" alt="Ícono de Demo" class="icono-proyecto">
+                                    <span data-lang-key="p-enlace-demo">Demo</span>
+                                </a>
+                                <a href="https://github.com/LuisGuillermo-RamosDiaz/grupofrontera" class="enlace-proyecto" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/logo-github.svg" alt="Ícono de GitHub" class="icono-proyecto">
+                                    <span data-lang-key="p-enlace-codigo">Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-proyecto flex flex-col animar-entrada">
+                        <figure class="aspect-video">
+                            <picture>
+                                <source media="(max-width: 640px)" srcset="assets/prototipo-astrocast-movil.png">
+                                <source media="(max-width: 1024px)" srcset="assets/prototipo-astrocast-tablet.png">
+                                <img src="assets/prototipo-astrocast-escritorio.png" alt="Vista previa del proyecto AstroCast" class="w-full h-full object-cover">
+                            </picture>
+                        </figure>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold text-white" data-lang-key="p2-titulo">AstroCast (Guía Climática Histórica)</h3>
+                            <div class="mt-3">
+                                <span class="etiqueta-rol" data-lang-key="p2-rol">Proyecto de Equipo (NASA Challenge)</span>
+                            </div>
+                            <p class="mt-3 text-gray-400 flex-1 text-left md:text-justify" data-lang-key="p2-desc">Aplicación web para el "NASA Space Apps Challenge" que funciona como un asistente de planificación climática. Utiliza la API GPM/IMERG de la NASA para analizar datos históricos y calcular la probabilidad de condiciones como lluvia o calor en una fecha y lugar específicos, mostrando los resultados con visualizaciones y un mapa interactivo.</p>
+                            <div class="mt-4 flex flex-wrap gap-2"><span class="etiqueta-tecnologia">React</span><span class="etiqueta-tecnologia">NPM</span><span class="etiqueta-tecnologia">Vite</span><span class="etiqueta-tecnologia">Postman</span><span class="etiqueta-tecnologia">MongoDB</span></div>
+                            <div class="mt-6 flex gap-6">
+                                <a href="https://astro-cast.vercel.app/" class="enlace-proyecto" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/icono-internet.svg" alt="Ícono de Demo" class="icono-proyecto">
+                                    <span data-lang-key="p-enlace-demo">Demo</span>
+                                </a>
+                                <a href="https://github.com/SoyMaoza/AstroCast" class="enlace-proyecto" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/logo-github.svg" alt="Ícono de GitHub" class="icono-proyecto">
+                                    <span data-lang-key="p-enlace-codigo">Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-proyecto flex flex-col animar-entrada">
+                        <figure class="aspect-video">
+                            <picture>
+                                <source media="(max-width: 640px)" srcset="assets/prototipo-mycecu-movil.png">
+                                <source media="(max-width: 1024px)" srcset="assets/prototipo-mycecu-tablet.png">
+                                <img src="assets/prototipo-mycecu-escritorio.png" alt="Vista previa del proyecto MyCECU" class="w-full h-full object-cover">
+                            </picture>
+                        </figure>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold text-white" data-lang-key="p3-titulo">MyCECU (Gestión de Expediente Clínico)</h3>
+                            <div class="mt-3">
+                                <span class="etiqueta-rol" data-lang-key="p3-rol">Proyecto de Equipo (Académico)</span>
+                            </div>
+                            <p class="mt-3 text-gray-400 flex-1 text-left md:text-justify" data-lang-key="p3-desc">Una aplicación de escritorio para la administración integral de expedientes clínicos. El sistema maneja el registro, búsqueda y gestión de pacientes, permitiendo la emisión y consulta de historiales clínicos. Almacena detalles de la consulta, diagnósticos y medicamentos recetados, facilitando el seguimiento médico.</p>
+                            <div class="mt-4 flex flex-wrap gap-2"><span class="etiqueta-tecnologia">Java</span><span class="etiqueta-tecnologia">MySQL</span></div>
+                            <div class="mt-6 flex gap-6">
+                                <a href="https://gitlab.com/01my-cecu/mycecu" class="enlace-proyecto" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/logo-gitlab.svg" alt="Ícono de GitLab" class="icono-proyecto">
+                                    <span data-lang-key="p-enlace-codigo">Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificaciones" class="py-24 sm:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center animar-entrada">
+                    <h2 class="titulo-seccion" data-lang-key="titulo-certificaciones">Certificaciones y Reconocimientos</h2>
+                    <p class="mt-6 text-lg text-gray-300" data-lang-key="desc-certificaciones">Validación de conocimientos y participación en eventos relevantes.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mt-16">
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-ccna-introduction-to-networks.jpg" alt="Miniatura del certificado CCNA Introduction to Networks" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">CCNA: Introduction to Networks</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-ccna-introduction-to-networks.jpg">Previsualizar</button>
+                                <a href="assets/certificado-ccna-introduction-to-networks.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-ccna-switching-routing-and-wireless-essentials.jpg" alt="Miniatura del certificado CCNA Switching, Routing, and Wireless Essentials" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">CCNA: Switching, Routing, and Wireless Essentials</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-ccna-switching-routing-and-wireless-essentials.jpg">Previsualizar</button>
+                                <a href="assets/certificado-ccna-switching-routing-and-wireless-essentials.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-conceptos-basicos-de-redes.jpg" alt="Miniatura del certificado Conceptos Básicos de Redes" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">Conceptos Básicos de Redes</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-conceptos-basicos-de-redes.jpg">Previsualizar</button>
+                                <a href="assets/certificado-conceptos-basicos-de-redes.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-conciencia-digital.jpg" alt="Miniatura del certificado Conciencia Digital" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">Conciencia Digital</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-conciencia-digital.jpg">Previsualizar</button>
+                                <a href="assets/certificado-conciencia-digital.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-css-essentials.jpg" alt="Miniatura del certificado CSS Essentials" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">CSS Essentials</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-css-essentials.jpg">Previsualizar</button>
+                                <a href="assets/certificado-css-essentials.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-html-essentials.jpg" alt="Miniatura del certificado HTML Essentials" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">HTML Essentials</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-html-essentials.jpg">Previsualizar</button>
+                                <a href="assets/certificado-html-essentials.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-using-computer-and-mobile-devices.jpg" alt="Miniatura del certificado Using Computer and Mobile Devices" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">Using Computer and Mobile Devices</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-using-computer-and-mobile-devices.jpg">Previsualizar</button>
+                                <a href="assets/certificado-using-computer-and-mobile-devices.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tarjeta-certificacion animar-entrada">
+                        <img src="assets/certificado-nasa-space-apps-challenge.jpg" alt="Miniatura del certificado NASA Space Apps Challenge" class="w-full h-full object-cover">
+                        <div class="certificacion-overlay">
+                            <p class="nombre-certificado">NASA Space Apps Challenge</p>
+                            <div class="certificacion-acciones">
+                                <button class="boton-accion-cert" data-src="assets/certificado-nasa-space-apps-challenge.jpg">Previsualizar</button>
+                                <a href="assets/certificado-nasa-space-apps-challenge.jpg" download class="boton-accion-cert">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="pt-16 pb-8 sm:pt-24 sm:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-2 animar-entrada">
+                    <h3 class="text-2xl font-bold" data-lang-key="footer-titulo-contacto">Hablemos</h3>
+                    <p class="mt-4 text-gray-400 max-w-md" data-lang-key="footer-desc">Siempre estoy abierto a oportunidades. Si tienes alguna pregunta o un proyecto en mente, no dudes en escribirme.</p>
+                    <div class="mt-6">
+                        <p class="text-gray-400" data-lang-key="footer-contactame">Contáctame:</p>
+                        <a href="mailto:contact@guillermoramos.dev" class="text-lg font-semibold text-blue-300 transition-colors hover:text-blue-200">contact@guillermoramos.dev</a>
+                    </div>
+                    <button id="botonCopiarCorreo" class="boton-secundario mt-4 text-sm py-2 px-4" data-lang-key="cta-copiar-correo">Copiar Correo</button>
+                </div>
+                <aside class="grid grid-cols-2 gap-12 animar-entrada anim-delay-150">
+                    <nav aria-labelledby="footer-nav-heading">
+                        <h4 id="footer-nav-heading" class="text-lg font-semibold" data-lang-key="footer-nav">Navegación</h4>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#inicio" class="text-gray-400 transition-colors hover:text-white"><span data-lang-key="nav-inicio">Inicio</span></a></li>
+                            <li><a href="#sobremi" class="text-gray-400 transition-colors hover:text-white"><span data-lang-key="nav-sobremi">Sobre Mí</span></a></li>
+                            <li><a href="#habilidades" class="text-gray-400 transition-colors hover:text-white"><span data-lang-key="nav-habilidades">Habilidades</span></a></li>
+                            <li><a href="#proyectos" class="text-gray-400 transition-colors hover:text-white"><span data-lang-key="nav-proyectos">Proyectos</span></a></li>
+                            <li><a href="#certificaciones" class="text-gray-400 transition-colors hover:text-white"><span data-lang-key="nav-certificaciones">Certificaciones</span></a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <h4 class="text-lg font-semibold" data-lang-key="footer-enlaces">Enlaces</h4>
+                        <ul class="mt-4 space-y-3">
+                            <li>
+                                <a href="https://github.com/LuisGuillermo-RamosDiaz" target="_blank" rel="noopener noreferrer" class="text-gray-400 transition-colors hover:text-white flex items-center gap-3">
+                                    <img src="assets/logo-github.svg" alt="Ícono de GitHub" class="w-5 h-5">
+                                    <span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/luis-guillermo-ramos-d%C3%ADaz-753087387/" target="_blank" rel="noopener noreferrer" class="text-gray-400 transition-colors hover:text-white flex items-center gap-3">
+                                    <img src="assets/logo-linkedin.svg" alt="Ícono de LinkedIn" class="w-5 h-5">
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500">
+                <p class="text-sm" data-lang-key="footer-copyright">© 2024 Luis Guillermo Ramos Díaz. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notificacion-copiado" id="notificacionCopiado">
+        <span data-lang-key="notif-copiado">¡Correo copiado al portapapeles!</span>
+    </div>
+
+    <div id="modalCertificado" class="modal-certificado">
+        <div class="modal-superposicion"></div>
+        <button id="modalCerrar" class="modal-cerrar" aria-label="Cerrar modal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+        </button>
+        <div class="modal-contenido">
+            <img id="visorCertificado" src="" alt="Visor de certificado" class="max-w-full max-h-full object-contain">
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
