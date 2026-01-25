@@ -100,20 +100,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const botonesIdioma = document.querySelectorAll('.boton-idioma');
         const gruposIdiomas = document.querySelectorAll('.grupo-idiomas');
         const elementosTraducibles = document.querySelectorAll('[data-lang-key]');
+        const elementosPlaceholder = document.querySelectorAll('[data-lang-key-placeholder]');
         let idiomaActual = 'es';
 
         function cambiarIdioma(lang) {
             if (!traducciones[lang]) return;
             idiomaActual = lang;
             document.documentElement.lang = lang;
-            
+
             elementosTraducibles.forEach(el => {
                 const key = el.dataset.langKey;
                 if (traducciones[lang][key]) {
                     el.textContent = traducciones[lang][key];
                 }
             });
-            
+
+            elementosPlaceholder.forEach(el => {
+                const key = el.dataset.langKeyPlaceholder;
+                if (traducciones[lang][key]) {
+                    el.placeholder = traducciones[lang][key];
+                }
+            });
+
             gruposIdiomas.forEach(grupo => {
                 grupo.classList.remove('pos-en', 'pos-fr');
                 if (lang !== 'es') {
