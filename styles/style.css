@@ -417,7 +417,7 @@ html[lang="fr"] .titulo-principal {
     font-weight: 600;
     color: var(--color-texto-principal);
     line-height: 1.4;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 3);
 }
 
 .certificacion-acciones {
