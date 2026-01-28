@@ -1,0 +1,30 @@
+# Luis Guillermo Ramos Díaz - Desarrollador de Software
+
+> Portafolio profesional y CV. Ingeniería en Tecnologías de la Información e Innovación Digital.
+
+## Perfil
+Desarrollador full-stack enfocado en crear soluciones de software eficientes, escalables y visualmente atractivas. Estudiante de la Universidad Politécnica de Sinaloa.
+
+## Habilidades Técnicas
+- **Lenguajes:** Java, JavaScript, Kotlin, C++, C
+- **Frontend:** React, Tailwind CSS, HTML5, CSS3
+- **Backend:** Node.js, MySQL, MongoDB, SQLite, Postman
+- **Herramientas:** Git, NPM, Vite, Figma, VS Code
+
+## Proyectos Destacados
+- **Grupo Frontera Website:** Sitio web estático con diseño moderno y modales dinámicos.
+- **AstroCast:** Asistente climático usando API de la NASA (Space Apps Challenge).
+- **MyCECU:** Sistema de gestión de expedientes clínicos (Java/MySQL).
+
+## Certificaciones
+- **Cisco (CCNA):** Introduction to Networks; Switching, Routing, and Wireless Essentials.
+- **NASA:** Space Apps Challenge Participant.
+- **Platzi (IA):** Inteligencia Artificial para Servicio al Cliente, Herramientas de IA para Datos, Diseño Ético con IA.
+- **Otros:** Conceptos Básicos de Redes, Conciencia Digital, HTML/CSS Essentials.
+
+## Contacto y Enlaces
+- **Web:** https://guillermoramos.dev
+- **Email:** contact@guillermoramos.dev
+- **GitHub:** https://github.com/LuisGuillermo-RamosDiaz
+- **LinkedIn:** https://www.linkedin.com/in/guillermo-ramos-dev/
+- **GitLab:** https://gitlab.com/luisguillermoramosdiaz32
