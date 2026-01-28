@@ -8,7 +8,7 @@
         "nav-certificaciones": "Certificaciones",
         "nav-contacto": "Contacto",
         "sr-abrir-menu": "Abrir menú principal",
-        "titulo-principal": "DEVELOPER",
+        "titulo-principal": "DEVELOPER <span class='sr-only'>- Luis Guillermo Ramos Díaz Portafolio</span>",
         "subtitulo-principal": "Luis Guillermo Ramos Díaz",
         "carrera": "Ingeniería en Tecnologías de la Información e Innovación Digital",
         "cta-proyectos": "Ver Proyectos",
@@ -67,7 +67,7 @@
         "cta-copiar-correo": "Copiar Correo",
         "footer-nav": "Navegación",
         "footer-enlaces": "Enlaces",
-        "footer-copyright": "© 2024 Luis Guillermo Ramos Díaz. Todos los derechos reservados.",
+        "footer-copyright": "© {year} Luis Guillermo Ramos Díaz. Todos los derechos reservados.",
         "notif-copiado": "¡Correo copiado al portapapeles!"
     },
     "en": {
@@ -79,7 +79,7 @@
         "nav-certificaciones": "Certifications",
         "nav-contacto": "Contact",
         "sr-abrir-menu": "Open main menu",
-        "titulo-principal": "DEVELOPER",
+        "titulo-principal": "DEVELOPER <span class='sr-only'>- Luis Guillermo Ramos Díaz Portfolio</span>",
         "subtitulo-principal": "Luis Guillermo Ramos Díaz",
         "carrera": "Information Technology and Digital Innovation Engineering",
         "cta-proyectos": "View Projects",
@@ -138,7 +138,7 @@
         "cta-copiar-correo": "Copy Email",
         "footer-nav": "Navigation",
         "footer-enlaces": "Links",
-        "footer-copyright": "© 2024 Luis Guillermo Ramos Díaz. All rights reserved.",
+        "footer-copyright": "© {year} Luis Guillermo Ramos Díaz. All rights reserved.",
         "notif-copiado": "Email copied to clipboard!"
     },
     "fr": {
@@ -150,7 +150,7 @@
         "nav-certificaciones": "Certifications",
         "nav-contacto": "Contact",
         "sr-abrir-menu": "Ouvrir le menu principal",
-        "titulo-principal": "DÉVELOPPEUR",
+        "titulo-principal": "DÉVELOPPEUR <span class='sr-only'>- Luis Guillermo Ramos Díaz Portfolio</span>",
         "subtitulo-principal": "Luis Guillermo Ramos Díaz",
         "carrera": "Ingénierie des Technologies de l'Information et de l'Innovation Numérique",
         "cta-proyectos": "Voir les Projets",
@@ -209,7 +209,7 @@
         "cta-copiar-correo": "Copier l'Email",
         "footer-nav": "Navigation",
         "footer-enlaces": "Liens",
-        "footer-copyright": "© 2024 Luis Guillermo Ramos Díaz. Tous droits réservés.",
+        "footer-copyright": "© {year} Luis Guillermo Ramos Díaz. Tous droits réservés.",
         "notif-copiado": "Email copié dans le presse-papiers !"
     }
 }

@@ -108,10 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
             idiomaActual = lang;
             document.documentElement.lang = lang;
 
+            const anioActual = new Date().getFullYear();
+
             elementosTraducibles.forEach(el => {
                 const key = el.dataset.langKey;
                 if (traducciones[lang][key]) {
-                    el.textContent = traducciones[lang][key];
+                    el.innerHTML = traducciones[lang][key].replace('{year}', anioActual);
                 }
             });
 
