@@ -6,10 +6,10 @@
 Desarrollador full-stack enfocado en crear soluciones de software eficientes, escalables y visualmente atractivas. Estudiante de la Universidad Politécnica de Sinaloa.
 
 ## Habilidades Técnicas
-- **Lenguajes:** Java, JavaScript, Kotlin, C++, C
+- **Lenguajes:** Java, JavaScript, Kotlin, C
 - **Frontend:** React, Tailwind CSS, HTML5, CSS3
 - **Backend:** Node.js, MySQL, MongoDB, SQLite, Postman
-- **Herramientas:** Git, NPM, Vite, Figma, VS Code
+- **Herramientas:** Git, NPM, Vite, Figma, VS Code, CCNA, Jira
 
 ## Proyectos Destacados
 - **Grupo Frontera Website:** Sitio web estático con diseño moderno y modales dinámicos.
