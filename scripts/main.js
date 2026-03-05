@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).catch(err => console.error('Error al copiar correo:', err));
             });
         }
-        
+
         const modal = document.getElementById('modalCertificado');
         if (modal) {
             const botonesPrevisualizar = document.querySelectorAll('.boton-accion-cert[data-src]');
@@ -246,6 +246,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        // --- Carrusel de Proyecto ---
+        const carruseles = document.querySelectorAll('[data-carousel]');
+        carruseles.forEach(carrusel => {
+            const slides = carrusel.querySelectorAll('.carrusel-slide');
+            const puntos = carrusel.querySelectorAll('.carrusel-punto');
+            const flechaIzq = carrusel.querySelector('.carrusel-flecha-izq');
+            const flechaDer = carrusel.querySelector('.carrusel-flecha-der');
+            let slideActual = 0;
+            let intervaloAuto;
+
+            function irASlide(index) {
+                slides[slideActual].classList.remove('activo');
+                puntos[slideActual].classList.remove('activo');
+                slideActual = (index + slides.length) % slides.length;
+                slides[slideActual].classList.add('activo');
+                puntos[slideActual].classList.add('activo');
+            }
+
+            function iniciarAuto() {
+                intervaloAuto = setInterval(() => irASlide(slideActual + 1), 3500);
+            }
+
+            function detenerAuto() {
+                clearInterval(intervaloAuto);
+            }
+
+            if (flechaDer) flechaDer.addEventListener('click', () => { detenerAuto(); irASlide(slideActual + 1); iniciarAuto(); });
+            if (flechaIzq) flechaIzq.addEventListener('click', () => { detenerAuto(); irASlide(slideActual - 1); iniciarAuto(); });
+
+            puntos.forEach(punto => {
+                punto.addEventListener('click', () => {
+                    detenerAuto();
+                    irASlide(parseInt(punto.dataset.slide));
+                    iniciarAuto();
+                });
+            });
+
+            carrusel.addEventListener('mouseenter', detenerAuto);
+            carrusel.addEventListener('mouseleave', iniciarAuto);
+
+            iniciarAuto();
+        });
     }
 
     inicializarPortfolio();
