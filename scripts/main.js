@@ -247,6 +247,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // --- Modal CV ---
+        const modalCV = document.getElementById('modalCV');
+        if (modalCV) {
+            const botonVerCV = document.getElementById('botonVerCV');
+            const visorCV = document.getElementById('visorCV');
+            const botonCerrarCV = document.getElementById('modalCVCerrar');
+            const superposicionCV = modalCV.querySelector('.modal-superposicion');
+
+            function abrirModalCV() {
+                visorCV.setAttribute('src', 'assets/curriculum-vitae-luis-guillermo-ramos-diaz.pdf');
+                modalCV.classList.add('abierto');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function cerrarModalCV() {
+                modalCV.classList.remove('abierto');
+                visorCV.setAttribute('src', '');
+                document.body.style.overflow = '';
+            }
+
+            if (botonVerCV) botonVerCV.addEventListener('click', abrirModalCV);
+            botonCerrarCV.addEventListener('click', cerrarModalCV);
+            superposicionCV.addEventListener('click', cerrarModalCV);
+
+            window.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modalCV.classList.contains('abierto')) {
+                    cerrarModalCV();
+                }
+            });
+        }
+
+        // --- Acordeón Platzi ---
+        const botonAcordeon = document.getElementById('botonAcordeonPlatzi');
+        const acordeon = document.getElementById('acordeonPlatzi');
+        if (botonAcordeon && acordeon) {
+            botonAcordeon.addEventListener('click', () => {
+                const estaAbierto = acordeon.classList.toggle('abierto');
+                botonAcordeon.setAttribute('aria-expanded', estaAbierto);
+            });
+        }
+
         // --- Carrusel de Proyecto ---
         const carruseles = document.querySelectorAll('[data-carousel]');
         carruseles.forEach(carrusel => {

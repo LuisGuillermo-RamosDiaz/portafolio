@@ -731,6 +731,147 @@ html[lang="fr"] .titulo-principal {
     transform: translateY(0);
 }
 
+/* --- Acordeón Platzi --- */
+.acordeon-platzi {
+    border: 1px solid rgba(66, 165, 245, 0.15);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--color-fondo-secundario);
+}
+
+.acordeon-titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-texto-principal);
+    transition: background-color 0.3s ease;
+    text-align: left;
+}
+
+.acordeon-titulo:hover {
+    background-color: rgba(66, 165, 245, 0.05);
+}
+
+.acordeon-titulo-izq {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.acordeon-icono-svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    color: var(--color-acento-principal);
+}
+
+.acordeon-titulo-texto {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+}
+
+.acordeon-subtitulo {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario);
+    margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+.acordeon-conteo {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--color-acento-principal), var(--color-acento-secundario));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acordeon-chevron {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: var(--color-acento-principal);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acordeon-platzi.abierto .acordeon-chevron {
+    transform: rotate(180deg);
+}
+
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acordeon-platzi.abierto .acordeon-contenido {
+    max-height: 2000px;
+}
+
+@media (max-width: 640px) {
+    .acordeon-titulo {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+
+    .acordeon-subtitulo {
+        display: none;
+    }
+}
+
+/* --- Modal CV --- */
+.modal-cv-contenido {
+    width: 95%;
+    height: 90%;
+    flex-direction: column;
+    pointer-events: auto;
+    z-index: 5;
+}
+
+.visor-cv-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: white;
+    pointer-events: auto;
+}
+
+.visor-cv-fallback {
+    text-align: center;
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.visor-cv-fallback a {
+    color: var(--color-acento-principal);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .modal-cv-contenido {
+        width: 98%;
+        height: 85%;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }

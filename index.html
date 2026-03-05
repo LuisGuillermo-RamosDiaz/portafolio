@@ -181,9 +181,10 @@
                         en desarrollo full-stack, aprendo y me adapto constantemente a las nuevas tecnologías. Mi
                         objetivo es colaborar en proyectos desafiantes y seguir creciendo profesionalmente en el
                         dinámico mundo del software.</p>
-                    <div class="mt-10">
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                        <button id="botonVerCV" class="boton-principal" data-lang-key="cta-ver-cv">Ver CV</button>
                         <a href="assets/curriculum-vitae-luis-guillermo-ramos-diaz.pdf"
-                            download="curriculum-vitae-luis-guillermo-ramos-diaz.pdf" class="boton-principal"
+                            download="curriculum-vitae-luis-guillermo-ramos-diaz.pdf" class="boton-secundario"
                             data-lang-key="cta-cv">Descargar CV (PDF)</a>
                     </div>
                 </div>
@@ -260,6 +261,11 @@
                                     class="mt-4 font-semibold text-base">Node.js</span></div>
                         </li>
                         <li>
+                            <div class="tarjeta-habilidad"><img src="assets/logo-express.svg" alt="Icono de Express.js"
+                                    class="h-12 w-12 object-contain"><span
+                                    class="mt-4 font-semibold text-base">Express.js</span></div>
+                        </li>
+                        <li>
                             <div class="tarjeta-habilidad"><img src="assets/logo-mysql.svg" alt="Icono de MySQL"
                                     class="h-12 w-12 object-contain"><span
                                     class="mt-4 font-semibold text-base">MySQL</span></div>
@@ -275,9 +281,9 @@
                                     class="mt-4 font-semibold text-base">SQLite</span></div>
                         </li>
                         <li>
-                            <div class="tarjeta-habilidad"><img src="assets/logo-postman.svg" alt="Icono de Postman"
+                            <div class="tarjeta-habilidad"><img src="assets/logo-supabase.svg" alt="Icono de Supabase"
                                     class="h-12 w-12 object-contain"><span
-                                    class="mt-4 font-semibold text-base">Postman</span></div>
+                                    class="mt-4 font-semibold text-base">Supabase</span></div>
                         </li>
                     </ul>
                     <ul id="panel-herramientas" class="panel-habilidad">
@@ -287,9 +293,19 @@
                                     class="mt-4 font-semibold text-base">Git</span></div>
                         </li>
                         <li>
+                            <div class="tarjeta-habilidad"><img src="assets/logo-docker.svg" alt="Icono de Docker"
+                                    class="h-12 w-12 object-contain"><span
+                                    class="mt-4 font-semibold text-base">Docker</span></div>
+                        </li>
+                        <li>
                             <div class="tarjeta-habilidad"><img src="assets/logo-npm.svg" alt="Icono de NPM"
                                     class="h-12 w-12 object-contain"><span
                                     class="mt-4 font-semibold text-base">NPM</span></div>
+                        </li>
+                        <li>
+                            <div class="tarjeta-habilidad"><img src="assets/logo-postman.svg" alt="Icono de Postman"
+                                    class="h-12 w-12 object-contain"><span
+                                    class="mt-4 font-semibold text-base">Postman</span></div>
                         </li>
                         <li>
                             <div class="tarjeta-habilidad"><img src="assets/logo-vite.svg" alt="Icono de Vite"
@@ -601,138 +617,165 @@
                     </article>
                 </div>
 
-                <div class="max-w-3xl mx-auto text-center mt-24 animar-entrada">
-                    <h3 class="text-2xl font-bold text-white" data-lang-key="titulo-ruta-ia">Cursos de Inteligencia
-                        Artificial (Platzi)</h3>
-                    <p class="mt-4 text-gray-400" data-lang-key="desc-ruta-ia">Ruta de aprendizaje enfocada en la
-                        aplicación de herramientas de Inteligencia Artificial en TI.</p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mt-16">
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-ai-servicio-cliente.jpg"
-                            alt="Inteligencia Artificial para Servicio al Cliente" class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c1">Inteligencia Artificial para Servicio al
-                                Cliente</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-ai-servicio-cliente.jpg">Previsualizar</button>
-                                <a href="assets/diploma-ai-servicio-cliente.jpg" download
-                                    class="boton-accion-cert">Descargar</a>
+                <div class="acordeon-platzi mt-16 animar-entrada" id="acordeonPlatzi">
+                    <button class="acordeon-titulo" id="botonAcordeonPlatzi" aria-expanded="false"
+                        aria-controls="contenidoAcordeonPlatzi">
+                        <div class="acordeon-titulo-izq">
+                            <svg class="acordeon-icono-svg" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div>
+                                <span class="acordeon-titulo-texto" data-lang-key="titulo-ruta-ia">Cursos de
+                                    Inteligencia Artificial (Platzi)</span>
+                                <span class="acordeon-subtitulo" data-lang-key="desc-ruta-ia">Ruta de aprendizaje
+                                    enfocada en la aplicación de herramientas de Inteligencia Artificial en TI.</span>
                             </div>
                         </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-data-ia-empresas.jpg"
-                            alt="Herramientas de Inteligencia Artificial para Equipos de Datos"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c2">Herramientas de Inteligencia Artificial
-                                para Equipos de Datos</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-data-ia-empresas.jpg">Previsualizar</button>
-                                <a href="assets/diploma-data-ia-empresas.jpg" download
-                                    class="boton-accion-cert">Descargar</a>
-                            </div>
+                        <span class="acordeon-conteo">9</span>
+                        <svg class="acordeon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="acordeon-contenido" id="contenidoAcordeonPlatzi">
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 p-6 pt-4">
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-ai-servicio-cliente.jpg"
+                                    alt="Inteligencia Artificial para Servicio al Cliente"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c1">Inteligencia Artificial para
+                                        Servicio al Cliente</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-ai-servicio-cliente.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-ai-servicio-cliente.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-data-ia-empresas.jpg"
+                                    alt="Herramientas de Inteligencia Artificial para Equipos de Datos"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c2">Herramientas de Inteligencia
+                                        Artificial para Equipos de Datos</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-data-ia-empresas.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-data-ia-empresas.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-diseno-etico-ia.jpg"
+                                    alt="Diseño Ético para el Desarrollo de Productos Digitales con IA"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c3">Diseño Ético para el Desarrollo
+                                        de Productos Digitales con IA</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-diseno-etico-ia.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-diseno-etico-ia.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-etica-ia.jpg"
+                                    alt="Ética y Manejo de Datos para Data Science e Inteligencia Artificial"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c4">Ética y Manejo de Datos para
+                                        Data Science e Inteligencia Artificial</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-etica-ia.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-etica-ia.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-gpt-con-google-sheets.jpg" alt="Chat GPT con Google Sheets"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c5">Chat GPT con Google Sheets</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-gpt-con-google-sheets.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-gpt-con-google-sheets.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-ia-finanzas.jpg" alt="Inteligencia Artificial para Finanzas"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c6">Inteligencia Artificial para
+                                        Finanzas</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-ia-finanzas.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-ia-finanzas.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-ingles-ia.jpg"
+                                    alt="English to Work with Artificial Intelligence Tools"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c7">English to Work with Artificial
+                                        Intelligence Tools</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-ingles-ia.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-ingles-ia.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-midjourney.jpg"
+                                    alt="Midjourney para Generación de Imágenes con IA"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c8">Midjourney para Generación de
+                                        Imágenes con IA</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-midjourney.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-midjourney.jpg" download
+                                            class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tarjeta-certificacion">
+                                <img src="assets/diploma-sd.jpg"
+                                    alt="Stable Diffusion para Generación de Imágenes con IA"
+                                    class="w-full h-full object-cover">
+                                <div class="certificacion-overlay">
+                                    <p class="nombre-certificado" data-lang-key="ia-c9">Stable Diffusion para Generación
+                                        de Imágenes con IA</p>
+                                    <div class="certificacion-acciones">
+                                        <button class="boton-accion-cert"
+                                            data-src="assets/diploma-sd.jpg">Previsualizar</button>
+                                        <a href="assets/diploma-sd.jpg" download class="boton-accion-cert">Descargar</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-diseno-etico-ia.jpg"
-                            alt="Diseño Ético para el Desarrollo de Productos Digitales con IA"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c3">Diseño Ético para el Desarrollo de
-                                Productos Digitales con IA</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-diseno-etico-ia.jpg">Previsualizar</button>
-                                <a href="assets/diploma-diseno-etico-ia.jpg" download
-                                    class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-etica-ia.jpg"
-                            alt="Ética y Manejo de Datos para Data Science e Inteligencia Artificial"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c4">Ética y Manejo de Datos para Data
-                                Science e Inteligencia Artificial</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-etica-ia.jpg">Previsualizar</button>
-                                <a href="assets/diploma-etica-ia.jpg" download class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-gpt-con-google-sheets.jpg" alt="Chat GPT con Google Sheets"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c5">Chat GPT con Google Sheets</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-gpt-con-google-sheets.jpg">Previsualizar</button>
-                                <a href="assets/diploma-gpt-con-google-sheets.jpg" download
-                                    class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-ia-finanzas.jpg" alt="Inteligencia Artificial para Finanzas"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c6">Inteligencia Artificial para Finanzas
-                            </p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-ia-finanzas.jpg">Previsualizar</button>
-                                <a href="assets/diploma-ia-finanzas.jpg" download
-                                    class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-ingles-ia.jpg" alt="English to Work with Artificial Intelligence Tools"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c7">English to Work with Artificial
-                                Intelligence Tools</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-ingles-ia.jpg">Previsualizar</button>
-                                <a href="assets/diploma-ingles-ia.jpg" download class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-midjourney.jpg" alt="Midjourney para Generación de Imágenes con IA"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c8">Midjourney para Generación de Imágenes
-                                con IA</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-midjourney.jpg">Previsualizar</button>
-                                <a href="assets/diploma-midjourney.jpg" download class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-certificacion animar-entrada">
-                        <img src="assets/diploma-sd.jpg" alt="Stable Diffusion para Generación de Imágenes con IA"
-                            class="w-full h-full object-cover">
-                        <div class="certificacion-overlay">
-                            <p class="nombre-certificado" data-lang-key="ia-c9">Stable Diffusion para Generación de
-                                Imágenes con IA</p>
-                            <div class="certificacion-acciones">
-                                <button class="boton-accion-cert"
-                                    data-src="assets/diploma-sd.jpg">Previsualizar</button>
-                                <a href="assets/diploma-sd.jpg" download class="boton-accion-cert">Descargar</a>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -865,6 +908,24 @@
         </button>
         <div class="modal-contenido">
             <img id="visorCertificado" src="" alt="Visor de certificado" class="max-w-full max-h-full object-contain">
+        </div>
+    </div>
+
+    <div id="modalCV" class="modal-certificado">
+        <div class="modal-superposicion"></div>
+        <button id="modalCVCerrar" class="modal-cerrar" aria-label="Cerrar visor de CV">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                <path
+                    d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </svg>
+        </button>
+        <div class="modal-contenido modal-cv-contenido">
+            <iframe id="visorCV" src="" class="visor-cv-iframe" title="Visor de CV"></iframe>
+            <p class="visor-cv-fallback">
+                <span data-lang-key="cv-fallback">Tu navegador no puede mostrar el PDF.</span>
+                <a href="assets/curriculum-vitae-luis-guillermo-ramos-diaz.pdf" target="_blank"
+                    rel="noopener noreferrer" data-lang-key="cv-fallback-link">Abrir en nueva pestaña</a>
+            </p>
         </div>
     </div>
 
