@@ -16,6 +16,7 @@
 
 .scrolled {
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(66, 165, 245, 0.1);
 }
 
 .inner {
@@ -34,7 +35,10 @@
 }
 
 .logo:hover {
-  color: white;
+  background: var(--c-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Desktop Nav */
@@ -70,7 +74,7 @@
   left: -100%;
   width: 100%;
   height: 2px;
-  background-color: var(--c-accent-secondary);
+  background: var(--c-gradient);
   transition: left 0.4s var(--ease-out);
 }
 

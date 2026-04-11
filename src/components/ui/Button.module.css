@@ -9,9 +9,10 @@
   font-size: var(--fs-base);
   text-align: center;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
   transition:
     transform var(--duration-normal) var(--ease-out),
-    background-color var(--duration-normal) ease,
     box-shadow var(--duration-normal) ease,
     color var(--duration-normal) ease,
     border-color var(--duration-normal) ease;
@@ -19,33 +20,69 @@
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
-/* Primary */
+/* Primary — gradient + shimmer */
 .primary {
-  background-color: var(--c-accent);
+  background: var(--c-gradient);
   color: white;
   box-shadow: var(--shadow-accent);
 }
 
+.primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.primary:hover::after {
+  left: 120%;
+}
+
 .primary:hover {
-  background-color: var(--c-accent-secondary);
   box-shadow: var(--shadow-accent-lg);
 }
 
-/* Secondary */
+/* Secondary — border glow */
 .secondary {
   background-color: transparent;
   color: var(--c-accent);
   border: 2px solid var(--c-accent);
+  box-shadow: none;
+}
+
+.secondary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--c-gradient);
+  opacity: 0;
+  transition: opacity var(--duration-normal) ease;
+  z-index: -1;
 }
 
 .secondary:hover {
-  background-color: var(--c-accent);
   color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-accent);
+}
+
+.secondary:hover::after {
+  opacity: 1;
 }

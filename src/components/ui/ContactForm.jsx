@@ -33,6 +33,13 @@ export default function ContactForm() {
     }
   }
 
+  const submitLabel =
+    state === FORM_STATES.submitting
+      ? '...'
+      : state === FORM_STATES.success
+        ? '✓ ' + (t('form-enviado') || 'Enviado')
+        : t('form-enviar');
+
   return (
     <form
       name="contacto"
@@ -50,45 +57,45 @@ export default function ContactForm() {
       </p>
 
       <div className={styles.field}>
-        <label htmlFor="nombre" className={styles.label}>
-          {t('form-nombre-label')}
-        </label>
         <input
           type="text"
           id="nombre"
           name="nombre"
           required
           className={styles.input}
-          placeholder={t('form-nombre-placeholder')}
+          placeholder=" "
         />
+        <label htmlFor="nombre" className={styles.label}>
+          {t('form-nombre-label')}
+        </label>
       </div>
 
       <div className={styles.field}>
-        <label htmlFor="email" className={styles.label}>
-          {t('form-email-label')}
-        </label>
         <input
           type="email"
           id="email"
           name="email"
           required
           className={styles.input}
-          placeholder={t('form-email-placeholder')}
+          placeholder=" "
         />
+        <label htmlFor="email" className={styles.label}>
+          {t('form-email-label')}
+        </label>
       </div>
 
       <div className={styles.field}>
-        <label htmlFor="mensaje" className={styles.label}>
-          {t('form-mensaje-label')}
-        </label>
         <textarea
           id="mensaje"
           name="mensaje"
           rows="4"
           required
           className={`${styles.input} ${styles.textarea}`}
-          placeholder={t('form-mensaje-placeholder')}
+          placeholder=" "
         />
+        <label htmlFor="mensaje" className={styles.label}>
+          {t('form-mensaje-label')}
+        </label>
       </div>
 
       <button
@@ -96,11 +103,7 @@ export default function ContactForm() {
         className={styles.submit}
         disabled={state === FORM_STATES.submitting}
       >
-        {state === FORM_STATES.submitting
-          ? '...'
-          : state === FORM_STATES.success
-            ? '✓'
-            : t('form-enviar')}
+        {submitLabel}
       </button>
 
       {state === FORM_STATES.error && (
