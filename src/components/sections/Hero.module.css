@@ -1,0 +1,136 @@
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--header-height);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    align-items: center;
+    padding-top: 0;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
+
+/* Text */
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .text {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.04em;
+  background: linear-gradient(90deg, var(--c-accent), var(--c-accent-secondary));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShimmer 5s ease infinite alternate;
+}
+
+.subtitle {
+  margin-top: var(--space-2);
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: var(--fw-regular);
+  color: var(--c-text-primary);
+  opacity: 0.9;
+}
+
+.career {
+  margin-top: var(--space-4);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: var(--c-text-secondary);
+  max-width: 36rem;
+}
+
+.ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 480px) {
+  .ctas { flex-direction: row; }
+}
+
+/* Figure */
+.figure {
+  width: 100%;
+  max-width: 180px;
+  margin: var(--space-4) auto 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out 150ms,
+    transform 0.8s ease-out 150ms;
+}
+
+@media (min-width: 1024px) {
+  .figure {
+    max-width: 24rem;
+    margin: 0;
+    justify-self: end;
+    order: 1;
+  }
+}
+
+.figureVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 4px solid var(--c-accent);
+  box-shadow: 0 0 25px var(--c-accent-glow);
+  transition: box-shadow var(--duration-slow) ease;
+}
+
+.portrait:hover {
+  box-shadow: 0 0 40px var(--c-accent-glow), 0 0 80px rgba(66, 165, 245, 0.15);
+}
+
+@media (max-width: 1023px) {
+  .portrait { border-radius: 50%; }
+}
