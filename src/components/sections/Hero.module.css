@@ -211,27 +211,6 @@
   .portraitWrap { border-radius: 50%; }
 }
 
-.portraitGlow {
-  position: absolute;
-  inset: -4px;
-  border-radius: inherit;
-  background: conic-gradient(
-    from 0deg,
-    var(--c-accent),
-    var(--c-accent-secondary),
-    transparent,
-    var(--c-accent-secondary),
-    var(--c-accent)
-  );
-  animation: rotateGlow 4s linear infinite;
-  opacity: 0.7;
-  z-index: 0;
-}
-
-@keyframes rotateGlow {
-  to { transform: rotate(360deg); }
-}
-
 .portrait {
   position: relative;
   width: 100%;
@@ -239,7 +218,17 @@
   object-fit: cover;
   border-radius: inherit;
   z-index: 1;
-  border: 4px solid var(--c-bg-primary);
+  border: 3px solid var(--c-accent);
+  box-shadow:
+    0 0 30px rgba(66, 165, 245, 0.25),
+    0 0 60px rgba(0, 178, 227, 0.1);
+  transition: box-shadow var(--duration-slow) ease;
+}
+
+.portrait:hover {
+  box-shadow:
+    0 0 40px rgba(66, 165, 245, 0.35),
+    0 0 80px rgba(0, 178, 227, 0.15);
 }
 
 /* --- Scroll Hint --- */

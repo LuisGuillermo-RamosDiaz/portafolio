@@ -10,7 +10,7 @@ const ROLES = {
   fr: ['Développeur Full-Stack', 'Ingénieur Logiciel', 'Créateur de Solutions'],
 };
 
-function useTypewriter(texts, speed = 80, pause = 2000) {
+function useTypewriter(texts, speed = 110, pause = 4000) {
   const [display, setDisplay] = useState('');
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -99,7 +99,6 @@ export default function Hero() {
 
         <figure className={`${styles.figure} ${isVisible ? styles.figureVisible : ''}`}>
           <div className={styles.portraitWrap}>
-            <div className={styles.portraitGlow} />
             <img
               src="/assets/retrato-luis-guillermo-ramos-diaz.png"
               alt="Retrato profesional de Luis Guillermo Ramos Díaz"
