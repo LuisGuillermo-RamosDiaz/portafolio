@@ -1,0 +1,34 @@
+.title {
+  font-size: var(--fs-section);
+  font-weight: var(--fw-bold);
+  color: var(--c-text-primary);
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--space-2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--duration-slower) ease-out,
+    transform var(--duration-slower) ease-out;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--c-gradient);
+  border-radius: 2px;
+  transition: width 0.8s var(--ease-out);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.visible::after {
+  width: 100%;
+}

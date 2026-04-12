@@ -1,0 +1,20 @@
+.toast {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-gradient);
+  color: white;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  z-index: var(--z-toast);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  box-shadow: var(--shadow-lg);
+  transition: bottom var(--duration-slow) var(--ease-out);
+  white-space: nowrap;
+}
+
+.visible {
+  bottom: var(--space-8);
+}
